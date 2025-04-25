@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arshlan Khan Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -13,19 +14,19 @@
     }
 
     body {
-      background: linear-gradient(135deg, #e6f0ff, #ffffff);
-      color: #333;
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+      color: #e0f7fa;
       padding: 1rem;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      background: #fff;
+      background: rgba(0, 15, 25, 0.85);
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.15);
       animation: fadeIn 1s ease-in-out;
     }
 
@@ -35,18 +36,24 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      animation: slideDown 1s ease-in-out;
+      border: 3px solid cyan;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
     }
 
     h1 {
-      font-size: 1.8rem;
-      color: #004aad;
-      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      color: cyan;
+      margin-bottom: 0.3rem;
     }
 
     .title {
       font-size: 1.1rem;
       margin-bottom: 1rem;
+      color: #a0e0ff;
     }
 
     .section {
@@ -54,28 +61,31 @@
     }
 
     .section h2 {
-      color: #004aad;
+      color: #66ffff;
       margin-bottom: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      border-left: 4px solid cyan;
+      padding-left: 0.5rem;
+      animation: slideInLeft 1s ease-in-out;
     }
 
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
     }
 
     ul li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
+      position: relative;
+      padding-left: 1.2rem;
     }
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 10px 20px;
-      background-color: #004aad;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    ul li::before {
+      content: "\f0da";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: cyan;
     }
 
     @keyframes fadeIn {
@@ -83,24 +93,27 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    @keyframes slideDown {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.7rem;
       }
       .profile-pic {
         width: 120px;
         height: 120px;
       }
-      h1 {
-        font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1rem;
       }
-      .title {
-        font-size: 1rem;
+      .section h2 {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -110,12 +123,11 @@
     <center>
       <img class="profile-pic" src="pic.png" alt="Arshlan Khan" />
       <h1>Arshlan Khan</h1>
-      <div class="title">Medical & Administrative Fresher | B.C.A. Graduate</div>
-      <a class="download-btn" href="Arshlan_Khan_Medical_CV.docx" download>Download Resume</a>
+      <div class="title">Medical & Administrative Professional | B.C.A. Graduate</div>
     </center>
 
     <div class="section">
-      <h2>Contact Information</h2>
+      <h2><i class="fas fa-address-book"></i> Contact Information</h2>
       <ul>
         <li><strong>Phone:</strong> 8933909295</li>
         <li><strong>Email:</strong> arshlan8933909295@gmail.com</li>
@@ -125,7 +137,7 @@
     </div>
 
     <div class="section">
-      <h2>Education</h2>
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <ul>
         <li><strong>B.C.A.</strong> - Film Institute of EMITS (2021-2024)</li>
         <li><strong>Intermediate (Science - Biology)</strong> - Hussainabad Inter College (60%)</li>
@@ -134,7 +146,7 @@
     </div>
 
     <div class="section">
-      <h2>Skills</h2>
+      <h2><i class="fas fa-briefcase-medical"></i> Skills</h2>
       <ul>
         <li>Computer Operations & MS Office Suite</li>
         <li>Medical Record Management</li>
@@ -145,7 +157,7 @@
     </div>
 
     <div class="section">
-      <h2>Activities</h2>
+      <h2><i class="fas fa-user-friends"></i> Activities</h2>
       <ul>
         <li>Volunteer at Health Awareness Programs</li>
         <li>Cultural Committee Member</li>
